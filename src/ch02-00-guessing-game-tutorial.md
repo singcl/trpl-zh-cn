@@ -26,6 +26,7 @@ $ cd guessing_game
 ```toml
 {{#include ../listings/ch02-guessing-game-tutorial/no-listing-01-cargo-new/Cargo.toml}}
 ```
+@[code toml](@listings/ch02-guessing-game-tutorial/no-listing-01-cargo-new/Cargo.toml)
 
 正如第一章那样，`cargo new` 生成了一个 “Hello, world!” 程序。查看 _src/main.rs_ 文件：
 
@@ -34,6 +35,7 @@ $ cd guessing_game
 ```rust
 {{#rustdoc_include ../listings/ch02-guessing-game-tutorial/no-listing-01-cargo-new/src/main.rs}}
 ```
+@[code](@listings/ch02-guessing-game-tutorial/no-listing-01-cargo-new/src/main.rs)
 
 现在使用 `cargo run` 命令，一步完成 “Hello, world!” 程序的编译和运行：
 

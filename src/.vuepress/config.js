@@ -1,11 +1,13 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
+// import path from 'path';
+// import { fileURLToPath } from 'url';
+// const __filename = fileURLToPath(import.meta.url);
+// // 👇️ "/home/john/Desktop/javascript"
+// const __dirname = path.dirname(__filename);
+// console.log('directory-name 👉️', __dirname);
 
-const __filename = fileURLToPath(import.meta.url);
+import { getDirname, path } from '@vuepress/utils';
 
-// 👇️ "/home/john/Desktop/javascript"
-const __dirname = path.dirname(__filename);
-console.log('directory-name 👉️', __dirname);
+const __dirname = getDirname(import.meta.url);
 
 // .vuepress/config.js
 export default {
@@ -15,5 +17,11 @@ export default {
     },
     alias: {
         img: path.resolve(__dirname, './../img')
+    },
+    markdown: {
+        importCode: {
+            handleImportPath: (str) =>
+                str.replace(/^@listings/, path.resolve(__dirname, './../../listings'))
+        }
     }
 };
